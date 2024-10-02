@@ -10,7 +10,18 @@ token = st.secrets.HUGGINGFACE_TOKEN_KEY
 st.set_page_config(
     page_title="Generative Image",
 )
-display_Anime_df(token)
+with st.sidebar:
+    # Create the options menu
+    selected = option_menu(menu_title="Image-Gen Models",
+                           options=["Stable Diffusion XL"],
+                           icons=["box"],
+                           menu_icon="boxes",
+                           default_index=0
+                           )
+    
+if selected == "Stable Diffusion XL":
+    display_Anime_df(token)
+
 
 
 def Anime_df(token,inputs_value,height_value,width_value,guidance_scale_value,num_inference_steps_value,max_sequence_length_value):
