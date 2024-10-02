@@ -6,7 +6,7 @@ import io
 from io import BytesIO
 from dotenv import load_dotenv
 load_dotenv()
-token = st.secrets.get['HUGGINGFACE_TOKEN_KEY']
+token = st.secrets.HUGGINGFACE_TOKEN_KEY
 st.set_page_config(
     page_title="Generative Image",
 )
