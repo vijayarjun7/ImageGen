@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 token = st.secrets['HUGGINGFACE_TOKEN_KEY']
 st.set_page_config(
-        page_title="Generative Image",
+    page_title="Generative Image",
 )
 display_Anime_df(token)
 
